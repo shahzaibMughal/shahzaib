@@ -3,20 +3,22 @@
 namespace App\Http\Controllers;
 
 use App\Project;
+use App\ProjectsTechnames;
+use App\Techname;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
+
 
 class ProjectController extends Controller
 {
 
     public function index()
     {
+        return view('project.index')->with('projects',Project::all());
 
-       $projects = Project::first();
-
-//        return $projects->techname;
-//        return view('project.index');
+//       return Project::with('technames')->get();
     }
 
 
@@ -26,9 +28,7 @@ class ProjectController extends Controller
     }
 
 
-
-    public function store(Request $request)
-    {
+    public function store(Request $request){
         $rules =[
             'image'=>'required|max:1000',
             'title'=>'required',
@@ -51,14 +51,28 @@ class ProjectController extends Controller
         $liveLink = $request->input('liveLink');
         $technames = $request->input('projectTech');
 
-        $returnString = 'imageName: '.$imageName;
-        $returnString .= 'title: '.$title;
-        $returnString .= 'description: '.$description;
-        $returnString .= 'githublink: '.$githubLink;
-        $returnString .= 'liveLink: '.$liveLink;
-        $returnString .= 'technames: '.var_dump($technames);
-        return $returnString;
-//        return $imageName;
+
+        $project = new Project();
+        $project->title = $title;
+        $project->description = $description;
+        $project->githubLink = $githubLink;
+        $project->liveLink = $liveLink;
+        $project->imageName = $imageName;
+        $project->save();
+
+        foreach ($technames as $techname){
+                $techname = Techname::create([
+                    'techName' => $techname
+                ]);
+
+                $project->technames()->attach($techname);
+//                $linkingTable = new ProjectsTechnames();
+//                $linkingTable->project_id = $project_id;
+//                $linkingTable->techname_id = $techname->id;
+//                $linkingTable->save();
+            }
+
+        return redirect()->route('admin.project.index');
     }
 
 
@@ -79,6 +93,12 @@ class ProjectController extends Controller
         //
     }
 
+
+
+    public function delete($id)
+    {
+        return view('project.delete',['id'=>$id]);
+    }
     public function destroy(Project $project)
     {
         //

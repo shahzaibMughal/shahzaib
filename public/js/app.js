@@ -175,26 +175,29 @@ $('document').ready(function(){
         });
     }
     function appendProjectItem(projectItem, className){
+        // console.log(projectItem);
+        // return;
         if(projectItem){
             var project_item_html =  '<div class="project-item fadeInUpAnimation '+ className +'">';
             project_item_html += '<div class="project-image">';
-            project_item_html += '<img src="'+projectItem.image+'" alt="">';
+            project_item_html += '<img src="/project_images/'+projectItem.imageName+'" alt="">';
             project_item_html += '</div>';
             project_item_html += '<h3 class="project-title">'+projectItem.title+'</h3>';
             project_item_html += '<div class="project-description">';
             project_item_html += projectItem.description;
             project_item_html += '</div>';
             var projectsTechnologies = '';
-            for(var i=0; i<projectItem.technologies.length; i++){
-                projectsTechnologies += "<li>"+projectItem.technologies[i]+"</li>";
+            for(var i=0; i<projectItem.technames.length; i++){
+                projectsTechnologies += "<li>"+projectItem.technames[i].techName+"</li>";
             }
             project_item_html += '<ul class="project-technologies">'+projectsTechnologies+' </ul>';
-            project_item_html += '<div class="project-links">'
+            project_item_html += '<div class="project-links">';
             project_item_html += '<a href="'+projectItem.githubLink+'"><svg><use href="#github-icon" /></svg></a>';
             project_item_html += '<a href="'+projectItem.liveLink+'"><svg><use href="#external-link-icon" /></svg></a></div></div>';
             PROJECTS_CONTAINER.append(project_item_html);
         }
     }
+
     function extractAndAppendProjects(){
         // console.log("CurrentCount: "+currentProjectsCount);
         // console.log("TotalCount: "+totalProjectsCount);

@@ -15,7 +15,7 @@
         {{-- {{ csrf_field() }} --}}
 
         <input type="file" name="image"  />
-        <input type="text" name="title" placeholder="Project Title" value="{{old('title')}}">
+        <input type="text" name="title" placeholder="Project Title" value="">
         <input type="text" name="description" value="" placeholder="Project Description">
         <input type="text" name="liveLink" value="" placeholder="Live link">
         <input type="text" name="githubLink" value="" placeholder="Github link">

@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
-
+use App\Project;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -16,121 +16,20 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
-
+//
+//Route::get('test',function(){
+//
+//    $projectsData = Project::with('technames')->get();
+////    $projectsData = Project::with('technames')->pluck('title');
+//
+//
+//
+//    return response()->json($projectsData,200);
+//
+//});
 
 Route::get('projects',function(){
-    $projectsData = [
-        [
-            "image" => "https://picsum.photos/520/320",
-            "title" => "project title",
-            "description" => "This is project description",
-            "technologies" =>
-                [
-                    "Tect1","Tect2","Tect3","Tect4"
-                ],
-            "githubLink" => "https://www.github.com",
-            "liveLink" => "https://www.google.com"
-        ],
-        [
-            "image" => "https://picsum.photos/520/320",
-            "title" => "project title",
-            "description" => "This is project description",
-            "technologies" =>
-                [
-                    "Tect1","Tect2","Tect3","Tect4"
-                ],
-            "githubLink" => "https://www.github.com",
-            "liveLink" => "https://www.google.com"
-        ],
-        [
-            "image" => "https://picsum.photos/520/320",
-            "title" => "project title",
-            "description" => "This is project description",
-            "technologies" =>
-                [
-                    "Tect1","Tect2","Tect3","Tect4"
-                ],
-            "githubLink" => "https://www.github.com",
-            "liveLink" => "https://www.google.com"
-        ],
-        [
-            "image" => "https://picsum.photos/520/320",
-            "title" => "project title",
-            "description" => "This is project description",
-            "technologies" =>
-                [
-                    "Tect1","Tect2","Tect3","Tect4"
-                ],
-            "githubLink" => "https://www.github.com",
-            "liveLink" => "https://www.google.com"
-        ],
-        [
-            "image" => "https://picsum.photos/520/320",
-            "title" => "project title",
-            "description" => "This is project description",
-            "technologies" =>
-                [
-                    "Tect1","Tect2","Tect3","Tect4"
-                ],
-            "githubLink" => "https://www.github.com",
-            "liveLink" => "https://www.google.com"
-        ],
-        [
-            "image" => "https://picsum.photos/520/320",
-            "title" => "project title",
-            "description" => "This is project description",
-            "technologies" =>
-                [
-                    "Tect1","Tect2","Tect3","Tect4"
-                ],
-            "githubLink" => "https://www.github.com",
-            "liveLink" => "https://www.google.com"
-        ],
-        [
-            "image" => "https://picsum.photos/520/320",
-            "title" => "project title",
-            "description" => "This is project description",
-            "technologies" =>
-                [
-                    "Tect1","Tect2","Tect3","Tect4"
-                ],
-            "githubLink" => "https://www.github.com",
-            "liveLink" => "https://www.google.com"
-        ],
-        [
-            "image" => "https://picsum.photos/520/320",
-            "title" => "project title",
-            "description" => "This is project description",
-            "technologies" =>
-                [
-                    "Tect1","Tect2","Tect3","Tect4"
-                ],
-            "githubLink" => "https://www.github.com",
-            "liveLink" => "https://www.google.com"
-        ],
-        [
-            "image" => "https://picsum.photos/520/320",
-            "title" => "project title",
-            "description" => "This is project description",
-            "technologies" =>
-                [
-                    "Tect1","Tect2","Tect3","Tect4"
-                ],
-            "githubLink" => "https://www.github.com",
-            "liveLink" => "https://www.google.com"
-        ],
-        [
-            "image" => "https://picsum.photos/520/320",
-            "title" => "project title",
-            "description" => "This is project description",
-            "technologies" =>
-                [
-                    "Tect1","Tect2","Tect3","Tect4"
-                ],
-            "githubLink" => "https://www.github.com",
-            "liveLink" => "https://www.google.com"
-        ]
-    ];
 
+    $projectsData = Project::with('technames')->get();
     return response()->json($projectsData,200);
 });
