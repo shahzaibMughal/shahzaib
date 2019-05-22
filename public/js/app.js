@@ -61,6 +61,8 @@ $('document').ready(function(){
         });
 
 
+    
+
 
     function hightlightNavItem(navItem){
         //***** highlighting nav link, when click on nav item (<a> inside nav)
