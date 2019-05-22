@@ -13,6 +13,7 @@
             <h1>@yield('title')</h1>
             @show
     </div>
-    <script src="{{asset('js/app.js')}}"></script>
+    <script type="text/javascript" src="{{ asset('vendor/jquery.min.js') }}"></script>
+    <script src="{{asset('js/admin.js')}}"></script>
 </body>
 </html>

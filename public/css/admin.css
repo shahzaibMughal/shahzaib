@@ -45,13 +45,18 @@ a {
 
 
 
+.error{
+  color: red;
+}
+
+
 .button {
   font-family: "SFMono";
   font-weight: normal;
   background: none;
   border: 1px solid #08f3d0;
   border-radius: 5px;
-  padding: 0.5em 1em;
+  padding: 0.6em 1em;
   color: #08f3d0;
   font-size: 0.8em; }
 .button:hover {
@@ -62,6 +67,21 @@ a {
   cursor: no-drop; }
 .button:focus {
   outline: none; }
+
+.button.cancel, .button.delete{
+  text-align: center;
+  font-size: 1.2em;
+
+}
+.button.delete{
+  color: red;
+  border-color: red;
+}
+.button.delete:hover{
+  background-color: rgba(255,0,0,0.2);
+}
+
+
 
 .container {
   max-width: 600px;

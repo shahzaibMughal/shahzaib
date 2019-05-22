@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Project;
 use App\ProjectsTechnames;
 use App\Techname;
+use http\Env\Response;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
@@ -22,7 +23,7 @@ class ProjectController extends Controller
 
     public function create()
     {
-        return view('project.form');
+        return view('project.create');
     }
 
 
@@ -30,7 +31,9 @@ class ProjectController extends Controller
         $rules =[
             'image'=>'required|max:1000',
             'title'=>'required',
-            'description'=>'required'
+            'description'=>'required',
+            'liveLink'=>'active_url',
+            'githubLink'=>'active_url'
         ];
         $validator = Validator::make($request->all(),$rules);
 
@@ -82,13 +85,57 @@ class ProjectController extends Controller
 
     public function edit(Project $project)
     {
-        //
+        return view('project.edit',['project'=>$project]);
     }
 
 
     public function update(Request $request, Project $project)
     {
-        //
+
+        // save user data first, otherwise, when we redirect to form with errors, saved data will be populated
+        // and user changes will be discared
+        // all image files, will be stored inside public folder
+        $imageName = "";
+        if($request->image != null) $imageName = $this->saveImageAndGetPath($request->image);
+        $title = $request->input('title');
+        $description = $request->input('description');
+        $githubLink = $request->input('githubLink');
+        $liveLink = $request->input('liveLink');
+        $technames = $request->input('projectTech');
+
+        $project->title = $title;
+        $project->description = $description;
+        $project->githubLink = $githubLink;
+        $project->liveLink = $liveLink;
+        $project->imageName = $imageName;
+        $project->save();
+
+        $project->technames()->detach();
+
+//        return response()->json($project->technames,200);
+        foreach ($technames as $techname){
+            $techname = Techname::create([
+                'techName' => $techname
+            ]);
+            $project->technames()->attach($techname);
+        }
+
+        $rules =[
+            'image'=>'required|max:1000',
+            'title'=>'required',
+            'description'=>'required',
+            'liveLink'=>'active_url',
+            'githubLink'=>'active_url'
+        ];
+        $validator = Validator::make($request->all(),$rules);
+
+        if($validator->fails()){
+            return redirect()->route('admin.project.edit', ['id'=>$project->id])->withErrors($validator)->withInput();
+        }
+
+        //everything is valid, save into
+      return redirect()->route('admin.project.index');
+
     }
 
 
@@ -99,7 +146,8 @@ class ProjectController extends Controller
     }
     public function destroy(Project $project)
     {
-        //
+        $project->delete();
+        return redirect()->route('admin.project.index');
     }
 
 
