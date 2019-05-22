@@ -16,9 +16,7 @@ class ProjectController extends Controller
 
     public function index()
     {
-        return view('project.index')->with('projects',Project::all());
-
-//       return Project::with('technames')->get();
+        return view('project.index')->with('projects',Project::get());
     }
 
 
