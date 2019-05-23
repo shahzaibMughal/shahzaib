@@ -42,7 +42,12 @@ a {
     color: #08f3d0;
     text-decoration: none; }
 
-
+.success{
+    color: greenyellow;;
+}
+.errors_container span{
+    color: red;
+}
 
 .button {
     font-family: "SFMono";

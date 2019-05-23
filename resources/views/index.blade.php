@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Shahzaib Zaheer</title>
@@ -131,16 +132,18 @@
     <section class="contact" id="contact">
         <h3 class="sub-heading"><span>03.</span>Contact Me</h3>
         <div class="contact-content">
-            <form class="contact-form" action="index.html" method="post">
+
+            <form id="contact_form" class="contact-form">
                 <div class="form-item">
-                    <input type="text" name="" placeholder="Name">
-                    <input type="text" name="" placeholder="Email">
+                    <input id="contactor_name" type="text" name="" placeholder="Name"  required>
+                    <input id="contactor_email" type="email" name="" placeholder="Email" required>
                 </div>
                 <div class="form-item">
-                    <textarea name="Text1" cols="40" rows="5" placeholder="Message"></textarea>
+                    <textarea  id="contactor_message" name="Text1" cols="40" rows="5" placeholder="Message" required></textarea>
                 </div>
-                <input type="submit" class="button" value="Send">
+                <input id='contact_submint_btn' type="submit" class="button" value="Send">
             </form>
+
             <ul class="contact-info">
                 <li>
                     <img src="{{asset('resources/images/call_icon.svg')}}" alt="">

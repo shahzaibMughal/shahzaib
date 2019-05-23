@@ -394,5 +394,72 @@ $('document').ready(function(){
 
 
 
-/************ Animation
+/************ Contact Form
  ****************************************************/
+const FORM = $('#contact_form');
+const CONTACTOR_NAME = $('#contactor_name');
+const CONTACTOR_EMAIL = $('#contactor_email');
+const CONTACTOR_MESSAGE = $('#contactor_message');
+
+
+    function ContactData(){
+    }
+    FORM.on('submit',function(e){
+        e.preventDefault();
+
+        // grab the data
+        var data = new ContactData();
+        data.name = CONTACTOR_NAME.val();
+        data.email = CONTACTOR_EMAIL.val();
+        data.message = CONTACTOR_MESSAGE.val();
+
+        sendData(data);
+
+    });
+
+    function sendData(data){
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+        $.ajax({
+            type: "POST",
+            url: 'contact',
+            async: true,
+            data: data,
+            success: function(data){
+                if(data === 'success'){
+                    // all data is valid now
+                    $('.errors_container').remove(); // remove all errors
+                    var successHTML = '<span class="success">Your Message Successfully delivered :-)</span>';
+                    FORM.prepend(successHTML);
+
+                    // remove all the data
+                    CONTACTOR_NAME.val('');
+                    CONTACTOR_EMAIL.val('');
+                    CONTACTOR_MESSAGE.val('');
+                }
+                else{
+                    // show error message
+                    console.log(data);
+                    console.log("Data is not valid");
+                    $('.errors_container').remove(); // remove previous error and create new
+                    var errorsHTML = '<div class="errors_container">' +
+                        "<span >"+data.name+"</span><br>"+
+                        "<span >"+data.email+"</span><br>"+
+                        "<span>"+data.message+"</span><br>"+
+                        '</div>';
+                    FORM.prepend(errorsHTML);
+                }
+            },
+            error: function (jqXHR, textStatus, error) {
+                console.log(error);
+            }
+        });
+    }
+
+
+
+
+
