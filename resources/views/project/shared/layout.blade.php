@@ -8,7 +8,18 @@
     <title>@yield('title')</title>
 </head>
 <body>
-    <div class="container">
+
+    {{-- Logout element--}}
+
+    <a style="float: right" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+        Logout
+    </a>
+    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+        @csrf
+    </form>
+
+
+<div class="container">
         @section('content')
             <h1>@yield('title')</h1>
             @show

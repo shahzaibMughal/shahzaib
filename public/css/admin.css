@@ -80,7 +80,12 @@ a {
 .button.delete:hover{
   background-color: rgba(255,0,0,0.2);
 }
-
+.button.login{
+  text-align: center;
+  font-size: 1.2em;
+  margin-top: 48px;
+  align-self: flex-end;
+}
 
 
 .container {
@@ -137,7 +142,7 @@ form {
   form > .button {
     align-self: stretch; }
 
-input[type='text'] {
+input[type='text'],input[type='email'],input[type='password'] {
   width: 100%;
   font-size: 1.2em;
   background: none;
@@ -148,7 +153,7 @@ input[type='text'] {
   font-family: "SFMono";
   font-weight: normal;
   color: #e6f1ff; }
-  input[type='text']::placeholder {
+  input[type='text']::placeholder,input[type='email']::placeholder,input[type='password']::placeholder {
     color: rgba(230, 241, 255, 0.2); }
 
 #project_tech_input_container {

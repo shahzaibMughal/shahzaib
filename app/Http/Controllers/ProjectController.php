@@ -121,7 +121,6 @@ class ProjectController extends Controller
         }
 
         $rules =[
-            'image'=>'required|max:1000',
             'title'=>'required',
             'description'=>'required',
             'liveLink'=>'active_url',

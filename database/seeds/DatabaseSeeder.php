@@ -4,6 +4,7 @@ use Illuminate\Database\Seeder;
 use App\Project;
 use App\Techname;
 use App\ProjectsTechnames;
+use App\User;
 
 
 class DatabaseSeeder extends Seeder
@@ -33,5 +34,16 @@ class DatabaseSeeder extends Seeder
         $linkingTable->project_id = $project->id;
         $linkingTable->techname_id = $techname->id;
         $linkingTable->save();
+
+
+
+
+        //** Register admin user */
+        User::create([
+            'name' => "Shahzaib Zaheer",
+            'email' => "admin@shahzaib.com",
+            'password' => bcrypt('Pakistan143143143')
+
+        ]);
     }
 }
