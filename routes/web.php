@@ -19,4 +19,4 @@ Route::post('logout','Auth\LoginController@logout')->name('logout');
 
 // for contact form
 Route::post('contact','ContactController@handler');
-Route::get('test','ContactController@test');
+//Route::get('test\{name}\{email}\{msg}','ContactController@test')->name('sendMail');

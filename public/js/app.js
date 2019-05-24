@@ -397,6 +397,7 @@ $('document').ready(function(){
 /************ Contact Form
  ****************************************************/
 const FORM = $('#contact_form');
+const SEND_BTN = $('#contact_submit_btn');
 const CONTACTOR_NAME = $('#contactor_name');
 const CONTACTOR_EMAIL = $('#contactor_email');
 const CONTACTOR_MESSAGE = $('#contactor_message');
@@ -406,14 +407,28 @@ const CONTACTOR_MESSAGE = $('#contactor_message');
     }
     FORM.on('submit',function(e){
         e.preventDefault();
+        disableSendBtn();
 
         // grab the data
         var data = new ContactData();
         data.name = CONTACTOR_NAME.val();
         data.email = CONTACTOR_EMAIL.val();
         data.message = CONTACTOR_MESSAGE.val();
+        // var data = '{' +
+        //     '"name":"'+CONTACTOR_NAME.val()+'",'+
+        //     '"email":"'+CONTACTOR_EMAIL.val()+'",'+
+        //     '"message":"'+CONTACTOR_MESSAGE.val()+'"'+
+        //     '}';
+
+
+        // var data = {
+        //     name : CONTACTOR_NAME.val(),
+        //     email: CONTACTOR_EMAIL.val(),
+        //     message: CONTACTOR_MESSAGE.val()
+        // };
 
         sendData(data);
+        // console.log(data);
 
     });
 
@@ -429,6 +444,7 @@ const CONTACTOR_MESSAGE = $('#contactor_message');
             async: true,
             data: data,
             success: function(data){
+                console.log(data);
                 if(data === 'success'){
                     // all data is valid now
                     $('.errors_container').remove(); // remove all errors
@@ -439,6 +455,8 @@ const CONTACTOR_MESSAGE = $('#contactor_message');
                     CONTACTOR_NAME.val('');
                     CONTACTOR_EMAIL.val('');
                     CONTACTOR_MESSAGE.val('');
+                    enableSendBtn();
+
                 }
                 else{
                     // show error message
@@ -451,12 +469,24 @@ const CONTACTOR_MESSAGE = $('#contactor_message');
                         "<span>"+data.message+"</span><br>"+
                         '</div>';
                     FORM.prepend(errorsHTML);
+                    enableSendBtn();
                 }
             },
             error: function (jqXHR, textStatus, error) {
                 console.log(error);
+                enableSendBtn();
             }
         });
+    }
+
+
+    function enableSendBtn(){
+        SEND_BTN.removeAttr('disabled');
+        SEND_BTN.text('Send');
+    }
+    function disableSendBtn(){
+        SEND_BTN.attr('disabled','true');
+        SEND_BTN.text('Please wait');
     }
 
 

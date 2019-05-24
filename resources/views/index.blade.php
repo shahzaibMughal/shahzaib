@@ -141,7 +141,7 @@
                 <div class="form-item">
                     <textarea  id="contactor_message" name="Text1" cols="40" rows="5" placeholder="Message" required></textarea>
                 </div>
-                <input id='contact_submint_btn' type="submit" class="button" value="Send">
+                <input id='contact_submit_btn' type="submit" class="button" value="Send">
             </form>
 
             <ul class="contact-info">
