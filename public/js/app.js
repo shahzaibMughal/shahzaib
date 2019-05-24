@@ -482,11 +482,12 @@ const CONTACTOR_MESSAGE = $('#contactor_message');
 
     function enableSendBtn(){
         SEND_BTN.removeAttr('disabled');
-        SEND_BTN.text('Send');
+        SEND_BTN.attr('value','Send');
     }
     function disableSendBtn(){
         SEND_BTN.attr('disabled','true');
-        SEND_BTN.text('Please wait');
+        SEND_BTN.attr('value','Please wait....');
+
     }
 
 

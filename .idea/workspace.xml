@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d6870d2a-2ac4-4c33-8ab3-67cb7d95eb3e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Mail/ContactMail.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/project_images/18359015_1963358217220638_195785556705879561_o_1558647610.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/project_images/18582428_1969346469955146_569626278172747505_n_1558647577.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ContactController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ContactController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/emails/contact_mail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/emails/contact_mail.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/node_modules/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,13 +14,27 @@
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="445" selection-start-line="445" selection-end-line="445" />
+            <state relative-caret-position="351">
+              <caret line="487" column="41" lean-forward="true" selection-start-line="487" selection-start-column="41" selection-end-line="487" selection-end-column="41" />
               <folding>
                 <element signature="n#!!block;n#ContactData#0" />
               </folding>
@@ -38,10 +43,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/index.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="447">
+              <caret line="143" column="81" selection-start-line="143" selection-start-column="76" selection-end-line="143" selection-end-column="81" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ContactController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="292">
-              <caret line="32" selection-start-line="32" selection-end-line="32" />
+            <state relative-caret-position="322">
+              <caret line="29" column="52" lean-forward="true" selection-start-line="29" selection-start-column="52" selection-end-line="29" selection-end-column="52" />
               <folding>
                 <element signature="e#65#90#0#PHP" expanded="true" />
               </folding>
@@ -375,12 +389,12 @@
       <workItem from="1558543668148" duration="13677000" />
       <workItem from="1558633685682" duration="13589000" />
       <workItem from="1558726768910" duration="9786000" />
-      <workItem from="1558739449873" duration="865000" />
+      <workItem from="1558739449873" duration="1316000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58575000" />
+    <option name="totallyTimeSpent" value="59026000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -979,13 +993,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="142" column="22" lean-forward="true" selection-start-line="142" selection-start-column="22" selection-end-line="142" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/emails/fallback_mail.blade.php" />
     <entry file="file://$PROJECT_DIR$/app/Mail/ContactMail.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -1036,10 +1043,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="447">
+          <caret line="143" column="81" selection-start-line="143" selection-start-column="76" selection-end-line="143" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ContactController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
+        <state relative-caret-position="322">
+          <caret line="29" column="52" lean-forward="true" selection-start-line="29" selection-start-column="52" selection-end-line="29" selection-end-column="52" />
           <folding>
             <element signature="e#65#90#0#PHP" expanded="true" />
           </folding>
@@ -1048,8 +1062,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="445" selection-start-line="445" selection-end-line="445" />
+        <state relative-caret-position="351">
+          <caret line="487" column="41" lean-forward="true" selection-start-line="487" selection-start-column="41" selection-end-line="487" selection-end-column="41" />
           <folding>
             <element signature="n#!!block;n#ContactData#0" />
           </folding>
