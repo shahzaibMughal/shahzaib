@@ -9,11 +9,14 @@
 </head>
 <body>
 
-    {{-- Logout element--}}
 
-    <a style="float: right" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-        Logout
-    </a>
+    @if(! (request()->url() == route('login')))
+        <a style="float: right" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+            Logout
+        </a>
+    @endif
+
+
     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
         @csrf
     </form>

@@ -431,7 +431,6 @@ const CONTACTOR_MESSAGE = $('#contactor_message');
         // console.log(data);
 
     });
-
     function sendData(data){
         $.ajaxSetup({
             headers: {
@@ -457,6 +456,9 @@ const CONTACTOR_MESSAGE = $('#contactor_message');
                     CONTACTOR_MESSAGE.val('');
                     enableSendBtn();
 
+                    setTimeout(function(){
+                        $('.success').remove();
+                    },3000);
                 }
                 else{
                     // show error message
@@ -482,12 +484,9 @@ const CONTACTOR_MESSAGE = $('#contactor_message');
 
     function enableSendBtn(){
         SEND_BTN.removeAttr('disabled');
-        SEND_BTN.attr('value','Send');
     }
     function disableSendBtn(){
         SEND_BTN.attr('disabled','true');
-        SEND_BTN.attr('value','Please wait....');
-
     }
 
 
