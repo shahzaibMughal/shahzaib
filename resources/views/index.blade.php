@@ -34,7 +34,7 @@
         <h1 class="main-heading  fadeInUpAnimation">Shahzaib Zaheer.</h1>
         <h2 class="main-sub-heading  fadeInUpAnimation">I build things for the web.</h2>
         <p class="heading-description  fadeInUpAnimation">
-            I'm a <a href="#">Full Stack Web Developer </a> from Pakistan. I design, build & sometimes rescue web applications.
+            I'm a <a href="https://en.wikipedia.org/wiki/Web_developer" target="_blank">Full Stack Web Developer </a> from Pakistan. I design, build & sometimes rescue web applications.
             If you are a business seeking a web presence, have a project, idea or problem you'd like to discuss ? </p>
         <a href="#contact" class="button  fadeInUpAnimation">Contact Me</a>
     </header>
@@ -51,9 +51,10 @@
             </div>
             <div class="content-container">
                 <p>Hello! I'm Shahzaib,
-                    I'm a <a href="#">Full Stack Web Developer </a> from Wazirabad, Pakistan.
-                    I'm always looking to grow personally and professionally. Recently i have completed,
-                    Bachelor of Science in Software Engineering from <a href="#">Virtual University Of Pakistan</a>
+                    I'm a <a href="https://en.wikipedia.org/wiki/Web_developer" target="_blank">Full Stack Web Developer </a>  from Wazirabad, Pakistan.
+                    Recently, i have completed
+                    Bachelor of Science in Software Engineering from <a href="http://www.vu.edu.pk/">Virtual University Of Pakistan</a>
+                    I'm always looking to grow personally and professionally.
 
                 </p>
                 <p>
@@ -66,23 +67,21 @@
                     <p>Here's some of my skills:</p>
                     <div class="list-item-container">
                         <ul>
-                            <span>FrontEnd</span>
                             <li>Html 5</li>
                             <li>Css 3</li>
                             <li>Sass</li>
                             <li>Bootstrap</li>
                             <li>JavaScript</li>
                             <li>jQuery</li>
-                        </ul>
-                        <ul>
-                            <span>BackEnd</span>
-                            <li>OOP PHP</li>
-                            <li>MySQL</li>
-                            <li>Laravel</li>
 
                         </ul>
                         <ul>
-                            <span>Others</span>
+                            <li>OOP PHP</li>
+                            <li>MySQL</li>
+                            <li>Laravel</li>
+                            <li>wordpress</li>
+                        </ul>
+                        <ul>
                             <li>Github</li>
                             <li>Photoshop</li>
                             <li>Illustrator</li>
@@ -160,15 +159,15 @@
             <ul class="contact-info">
                 <li>
                     <img src="{{asset('resources/images/call_icon.svg')}}" alt="">
-                    <p>+92 0305 6302013</p>
+                    <p>+92 305 07 100 90</p>
                 </li>
                 <li>
                     <img src="{{asset('resources/images/mail_icon.svg')}}" alt="">
-                    <p>shahzaib@gmail.com</p>
+                    <p>user@shahzaibZaheer.com</p>
                 </li>
                 <li>
                     <img src="{{asset('resources/images/place_icon.svg')}}" alt="">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae in Cum.</p>
+                    <p>Cheema Coloney, Street # 12, Wazirabad 52000, Pakistan</p>
                 </li>
             </ul>
         </div>

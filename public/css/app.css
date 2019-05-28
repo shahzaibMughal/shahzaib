@@ -49,6 +49,8 @@ a {
     color: red;
 }
 
+
+
 .button {
     font-family: "SFMono";
     font-weight: normal;
@@ -158,6 +160,8 @@ header .button {
     top: 0.2em;
     left: -10px;
     color: #08f3d0; }
+
+
 .about .image {
     width: 100px;
     height: 100px;
