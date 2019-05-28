@@ -33,10 +33,9 @@
         <p class="heading-supporting-text fadeInUpAnimation">Hi my name is</p>
         <h1 class="main-heading  fadeInUpAnimation">Shahzaib Zaheer.</h1>
         <h2 class="main-sub-heading  fadeInUpAnimation">I build things for the web.</h2>
-        <p class="heading-description  fadeInUpAnimation">Consectetur adipisicing elit, sed do eiusmod tempor incididunt
-            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis
-            aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        <p class="heading-description  fadeInUpAnimation">
+            I'm a <a href="#">Full Stack Web Developer </a> from Pakistan. I design, build & sometimes rescue web applications.
+            If you are a business seeking a web presence, have a project, idea or problem you'd like to discuss ? </p>
         <a href="#contact" class="button  fadeInUpAnimation">Contact Me</a>
     </header>
 
@@ -51,29 +50,43 @@
                 </div>
             </div>
             <div class="content-container">
-                <p>Lorem ipsum dolor sit amet, <a href="#">consectetur</a> adipisicing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                    nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-                    mollit anim id est laborum.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing <a href="#">elit</a>, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat. </p>
+                <p>Hello! I'm Shahzaib,
+                    I'm a <a href="#">Full Stack Web Developer </a> from Wazirabad, Pakistan.
+                    I'm always looking to grow personally and professionally. Recently i have completed,
+                    Bachelor of Science in Software Engineering from <a href="#">Virtual University Of Pakistan</a>
+
+                </p>
+                <p>
+                    I want to be involved in projects that I can be proud of, join an amazing team and advance my development career.
+                    Take some time to look at <a href="#work">My Work</a> and if you're interested in helping me, please
+                    <a href="#contact">Contact Me</a>.
+                </p>
+
                 <div class="skills-list">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit:</p>
+                    <p>Here's some of my skills:</p>
                     <div class="list-item-container">
                         <ul>
+                            <span>FrontEnd</span>
+                            <li>Html 5</li>
+                            <li>Css 3</li>
+                            <li>Sass</li>
+                            <li>Bootstrap</li>
                             <li>JavaScript</li>
-                            <li>JavaScript</li>
-                            <li>JavaScript</li>
-                            <li>JavaScript</li>
-                            <li>JavaScript</li>
+                            <li>jQuery</li>
                         </ul>
                         <ul>
-                            <li>PHP</li>
-                            <li>SQL</li>
+                            <span>BackEnd</span>
+                            <li>OOP PHP</li>
+                            <li>MySQL</li>
+                            <li>Laravel</li>
+
+                        </ul>
+                        <ul>
+                            <span>Others</span>
+                            <li>Github</li>
+                            <li>Photoshop</li>
+                            <li>Illustrator</li>
+
                         </ul>
                     </div>
                 </div>
