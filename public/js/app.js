@@ -192,8 +192,8 @@ $('document').ready(function(){
             }
             project_item_html += '<ul class="project-technologies">'+projectsTechnologies+' </ul>';
             project_item_html += '<div class="project-links">';
-            project_item_html += '<a href="'+projectItem.githubLink+'"><svg><use href="#github-icon" /></svg></a>';
-            project_item_html += '<a href="'+projectItem.liveLink+'"><svg><use href="#external-link-icon" /></svg></a></div></div>';
+            project_item_html += '<a target="_blank" href="'+projectItem.githubLink+'"><svg><use href="#github-icon" /></svg></a>';
+            project_item_html += '<a target="_blank" href="'+projectItem.liveLink+'"><svg><use href="#external-link-icon" /></svg></a></div></div>';
             PROJECTS_CONTAINER.append(project_item_html);
         }
     }

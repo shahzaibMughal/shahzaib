@@ -53,7 +53,7 @@
                 <p>Hello! I'm Shahzaib,
                     I'm a <a class="link"  href="https://en.wikipedia.org/wiki/Web_developer" target="_blank">Full Stack Web Developer </a>  from Wazirabad, Pakistan.
                     Recently, i have completed
-                    Bachelor of Science in Software Engineering from <a class="link"  href="http://www.vu.edu.pk/">Virtual University Of Pakistan</a>
+                    Bachelor of Science in Software Engineering from <a class="link" target="_blank" href="http://www.vu.edu.pk/">Virtual University Of Pakistan</a>
                     I'm always looking to grow personally and professionally.
 
                 </p>
