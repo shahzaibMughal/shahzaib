@@ -21,9 +21,9 @@
 <nav id="main_sticky_nav" class="">
     <ul>
         <!-- <li><a class="active" href="#home"><span>01.</span>Home</a></li> -->
-        <li class=""><a href="#about"><span>01.</span>About</a></li>
-        <li class=""><a href="#work"><span>02.</span>Work</a></li>
-        <li class=""><a href="#contact"><span>03.</span>Contact</a></li>
+        <li class=""><a class="link" href="#about"><span>01.</span>About</a></li>
+        <li class=""><a class="link" href="#work"><span>02.</span>Work</a></li>
+        <li class=""><a class="link" href="#contact"><span>03.</span>Contact</a></li>
         <a class="button">Resume</a>
     </ul>
 </nav>
@@ -34,7 +34,7 @@
         <h1 class="main-heading  fadeInUpAnimation">Shahzaib Zaheer.</h1>
         <h2 class="main-sub-heading  fadeInUpAnimation">I build things for the web.</h2>
         <p class="heading-description  fadeInUpAnimation">
-            I'm a <a href="https://en.wikipedia.org/wiki/Web_developer" target="_blank">Full Stack Web Developer </a> from Pakistan. I design, build & sometimes rescue web applications.
+            I'm a <a class="link"  href="https://en.wikipedia.org/wiki/Web_developer" target="_blank">Full Stack Web Developer </a> from Pakistan. I design, build & sometimes rescue web applications.
             If you are a business seeking a web presence, have a project, idea or problem you'd like to discuss ? </p>
         <a href="#contact" class="button  fadeInUpAnimation">Contact Me</a>
     </header>
@@ -51,16 +51,16 @@
             </div>
             <div class="content-container">
                 <p>Hello! I'm Shahzaib,
-                    I'm a <a href="https://en.wikipedia.org/wiki/Web_developer" target="_blank">Full Stack Web Developer </a>  from Wazirabad, Pakistan.
+                    I'm a <a class="link"  href="https://en.wikipedia.org/wiki/Web_developer" target="_blank">Full Stack Web Developer </a>  from Wazirabad, Pakistan.
                     Recently, i have completed
-                    Bachelor of Science in Software Engineering from <a href="http://www.vu.edu.pk/">Virtual University Of Pakistan</a>
+                    Bachelor of Science in Software Engineering from <a class="link"  href="http://www.vu.edu.pk/">Virtual University Of Pakistan</a>
                     I'm always looking to grow personally and professionally.
 
                 </p>
                 <p>
                     I want to be involved in projects that I can be proud of, join an amazing team and advance my development career.
-                    Take some time to look at <a href="#work">My Work</a> and if you're interested in helping me, please
-                    <a href="#contact">Contact Me</a>.
+                    Take some time to look at <a class="link"  href="#work">My Work</a> and if you're interested in helping me, please
+                    <a class="link"  href="#contact">Contact Me</a>.
                 </p>
 
                 <div class="skills-list">

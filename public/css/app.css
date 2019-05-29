@@ -23,13 +23,20 @@
     src: url("/resources/fonts/SFMono_semibold.woff") format("woff"), url("/resources/fonts/SFMono_semibold.woff2") format("woff2"), url("/resources/fonts/SFMono_semibold.ttf") format("truetype");
     /* Safari, Android, iOS */
     font-weight: bold; }
+
+
 * {
-    font-family: 'Calibre' ,'Arial', 'sans-serif';
+    font-family: 'Calibre', Arial;
     font-weight: normal;
     font-size: 16px;
     margin: 0;
     color: #8892b0;
     box-sizing: border-box; }
+
+*::selection{
+    background: #08f3d0;
+}
+
 
 *::after, *::before {
     box-sizing: inherit; }
@@ -38,18 +45,27 @@ body {
     background: #0a192f;
     padding: 8px; }
 
+.link {
+    position: relative;
+    display: inline-block; }
+.link:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: #08f3d0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s; }
+.link:hover:after {
+    transform-origin: bottom left;
+    transform: scaleX(1); }
+
 a {
     color: #08f3d0;
     text-decoration: none; }
-
-.success{
-    color: greenyellow;;
-}
-.errors_container span{
-    color: red;
-}
-
-
 
 .button {
     font-family: "SFMono";
@@ -160,8 +176,6 @@ header .button {
     top: 0.2em;
     left: -10px;
     color: #08f3d0; }
-
-
 .about .image {
     width: 100px;
     height: 100px;
@@ -189,16 +203,12 @@ header .button {
     background-repeat: no-repeat;
     background-size: cover;
     background-position-x: center;
-    background-blend-mode: multiply;
-    transition: background-color .5s;
+    transition: background-color .5s, filter;
     z-index: 2;
     opacity: 1; }
-.about .image:hover::before {
-    top: 8px;
-    left: 8px; }
-.about .image:hover::after {
-    background-color: white;
-    transition: background-color .25s; }
+@media (min-width: 900px) {
+    .about .image::after {
+        background-blend-mode: multiply; } }
 
 .work {
     display: flex;
@@ -206,6 +216,20 @@ header .button {
     justify-content: center;
     min-height: 100vh;
     margin-bottom: 320px; }
+.work .project-item .project-image::after {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(8, 243, 208, 0.5);
+    transition: background-color .25s; }
+.work .project-item .project-image:hover::after {
+    background-color: rgba(8, 243, 208, 0); }
+
+.contact .contact-info li svg {
+    fill: #8892b0; }
 
 @media (max-width: 900px) {
     .work {
@@ -742,3 +766,5 @@ header .button {
     to {
         transform: translateY(0);
         opacity: 1; } }
+
+/*# sourceMappingURL=output.css.map */
